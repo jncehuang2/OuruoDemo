@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EUPRO欧诺包装 - 聚焦可持续、降本与赋能的包装策略服务">
+    <title>策略 - EUPRO欧诺包装</title>
+    
+    <!-- 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- 全局左侧锚点导航 -->
+    <nav class="side-nav" id="sideNav">
+        <ul class="side-nav__list">
+            <li class="side-nav__item side-nav__item--active">
+                <a href="#intro" class="side-nav__link">
+                    <span class="side-nav__text">策略</span>
+                    <span class="side-nav__star">*</span>
+                </a>
+            </li>
+            <li class="side-nav__item">
+                <a href="#services" class="side-nav__link">
+                    <span class="side-nav__text">设计</span>
+                </a>
+            </li>
+            <li class="side-nav__item">
+                <a href="#cta" class="side-nav__link">
+                    <span class="side-nav__text">落地</span>
+                    <span class="side-nav__star">*</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HEADER 导航栏 -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="#" class="header__logo">
+                <span class="header__logo-text">EUPRO欧诺包装</span>
+            </a>
+            
+            <nav class="header__nav" id="nav">
+                <a href="#" class="header__nav-link">首页</a>
+                <a href="#" class="header__nav-link">服务</a>
+                <a href="#" class="header__nav-link header__nav-link--active">策略</a>
+                <a href="#" class="header__nav-link">设计</a>
+                <a href="#" class="header__nav-link">生产</a>
+                <a href="#" class="header__nav-link">案例</a>
+                <a href="#" class="header__nav-link">新闻</a>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="header__search" aria-label="搜索">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <a href="#cta" class="header__btn">联系我们</a>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="header__menu-toggle" id="menuToggle" aria-label="菜单">
+                    <span class="header__menu-bar"></span>
+                    <span class="header__menu-bar"></span>
+                    <span class="header__menu-bar"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航 -->
+        <nav class="header__nav header__nav--mobile" id="mobileNav">
+            <a href="#" class="header__nav-link">首页</a>
+            <a href="#" class="header__nav-link">服务</a>
+            <a href="#" class="header__nav-link header__nav-link--active">策略</a>
+            <a href="#" class="header__nav-link">设计</a>
+            <a href="#" class="header__nav-link">生产</a>
+            <a href="#" class="header__nav-link">案例</a>
+            <a href="#" class="header__nav-link">新闻</a>
+            <a href="#cta" class="btn btn-primary" style="margin-top: 0.24rem;">联系我们</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO 首屏区 -->
+        <section class="hero">
+            <div class="hero__bg" id="heroBg"></div>
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <h1 class="hero__title">策略</h1>
+                <p class="hero__subtitle">聚焦可持续、降本与赋能</p>
+            </div>
+        </section>
+
+        <!-- STRATEGY INTRO 策略简介区 -->
+        <section class="strategy-intro" id="intro">
+            <div class="strategy-intro__container">
+                <!-- 中间标题 -->
+                <h2 class="strategy-intro__title">
+                    以一体化策略为锚<br>让包装成为品牌增长与降本的双重引擎
+                </h2>
+                
+                <!-- 右侧描述 -->
+                <div class="strategy-intro__desc">
+                    <p>我们相信，卓越的包装始于精准的洞察。欧诺的策略服务基于数据、趋势与品牌定位，帮助客户找到包装升级的最优路径，实现可持续的商业价值。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STRATEGY SERVICES 全链路策略规划区 - 手风琴布局 -->
+        <section class="strategy-services" id="services">
+            <div class="strategy-services__container">
+                <header class="strategy-services__header">
+                    <p class="strategy-services__label">欧诺提供哪些策略服务？</p>
+                    <h2 class="strategy-services__title">全链路策略规划，衔接设计与生产的关键桥梁</h2>
+                </header>
+                
+                <!-- 左右两栏：左侧图片 + 右侧手风琴 -->
+                <div class="strategy-split">
+                    <!-- 左侧图片 -->
+                    <div class="strategy-split__image">
+                        <img src="images/service-1.svg" alt="包装策略展示" loading="lazy">
+                    </div>
+                    
+                    <!-- 右侧手风琴 -->
+                    <div class="strategy-accordion">
+                        <!-- 手风琴项1：展开状态 -->
+                        <div class="strategy-accordion__item strategy-accordion__item--active" data-accordion>
+                            <div class="strategy-accordion__header">
+                                <div class="strategy-accordion__icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="2" y="2" width="20" height="20" rx="4" fill="#00D26A"/>
+                                        <path d="M7 12l4 4 6-8" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h3 class="strategy-accordion__title">品牌导向型策略规划</h3>
+                                <svg class="strategy-accordion__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="18 15 12 9 6 15"></polyline>
+                                </svg>
+                            </div>
+                            <div class="strategy-accordion__content">
+                                <p class="strategy-accordion__text">深入理解品牌DNA，构建与品牌定位高度契合的包装策略，让包装成为品牌传播的有力载体。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 手风琴项2：折叠状态 -->
+                        <div class="strategy-accordion__item" data-accordion>
+                            <div class="strategy-accordion__header">
+                                <div class="strategy-accordion__icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="2" y="2" width="20" height="20" rx="4" fill="#00D26A"/>
+                                        <rect x="6" y="6" width="5" height="5" fill="white"/>
+                                        <rect x="13" y="6" width="5" height="5" fill="white"/>
+                                        <rect x="6" y="13" width="5" height="5" fill="white"/>
+                                        <rect x="13" y="13" width="5" height="5" fill="white"/>
+                                    </svg>
+                                </div>
+                                <h3 class="strategy-accordion__title">成本与效率前置优化策略</h3>
+                                <svg class="strategy-accordion__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="strategy-accordion__content">
+                                <p class="strategy-accordion__text">在设计初期即考虑生产成本与效率，通过结构优化和工艺选择，实现降本增效的目标。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 手风琴项3：折叠状态 -->
+                        <div class="strategy-accordion__item" data-accordion>
+                            <div class="strategy-accordion__header">
+                                <div class="strategy-accordion__icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="2" y="2" width="20" height="20" rx="4" fill="#00D26A"/>
+                                        <path d="M12 6v12M6 12h12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <h3 class="strategy-accordion__title">全场景合规与趋势适配策略</h3>
+                                <svg class="strategy-accordion__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="strategy-accordion__content">
+                                <p class="strategy-accordion__text">紧跟法规变化和市场趋势，确保包装方案符合国内外标准，同时满足消费者对环保和便利的需求。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 手风琴项4：折叠状态 -->
+                        <div class="strategy-accordion__item" data-accordion>
+                            <div class="strategy-accordion__header">
+                                <div class="strategy-accordion__icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <rect x="2" y="2" width="20" height="20" rx="4" fill="#00D26A"/>
+                                        <circle cx="12" cy="12" r="5" fill="white"/>
+                                        <circle cx="12" cy="12" r="2" fill="#00D26A"/>
+                                    </svg>
+                                </div>
+                                <h3 class="strategy-accordion__title">一体化落地衔接策略</h3>
+                                <svg class="strategy-accordion__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="strategy-accordion__content">
+                                <p class="strategy-accordion__text">打通策略、设计与生产的全链路，确保创意方案能够高效转化为可量产的优质包装产品。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPETITIVENESS 差异化竞争力区 -->
+        <section class="competitiveness" id="competitiveness">
+            <div class="competitiveness__container">
+                <header class="competitiveness__header">
+                    <p class="competitiveness__label">为什么选择欧诺作为您的包装顾问？</p>
+                    <h2 class="competitiveness__title">依托一体化能力，构建策略差异化竞争力</h2>
+                </header>
+                
+                <div class="competitiveness__content">
+                    <!-- 左侧图片 -->
+                    <div class="competitiveness__image">
+                        <img src="images/competitiveness.svg" alt="欧诺包装产品展示" loading="lazy">
+                    </div>
+                    
+                    <!-- 右侧列表 -->
+                    <div class="competitiveness__list">
+                        <div class="competitiveness__item">
+                            <div class="competitiveness__item-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <div class="competitiveness__item-content">
+                                <h3 class="competitiveness__item-title">端到端服务闭环</h3>
+                                <p class="competitiveness__item-desc">从策略规划、创意设计到生产交付，一站式服务确保策略100%落地执行，避免设计与生产脱节。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="competitiveness__item">
+                            <div class="competitiveness__item-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                            </div>
+                            <div class="competitiveness__item-content">
+                                <h3 class="competitiveness__item-title">行业深耕经验</h3>
+                                <p class="competitiveness__item-desc">15年专注包装领域，服务超过500+知名品牌，积累了丰富的行业洞察和最佳实践。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="competitiveness__item">
+                            <div class="competitiveness__item-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                            </div>
+                            <div class="competitiveness__item-content">
+                                <h3 class="competitiveness__item-title">数据驱动决策</h3>
+                                <p class="competitiveness__item-desc">运用市场研究、消费者洞察和成本分析工具，让策略决策有迹可循、有据可依。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUES 四大价值区 -->
+        <section class="values" id="values">
+            <div class="values__container">
+                <header class="values__header">
+                    <p class="values__label">选择欧诺后您将获得什么？</p>
+                    <h2 class="values__title">欧诺的包装策略绝非"纸上方案"，而是可直接落地、兼具价值与效率的行动指南</h2>
+                </header>
+                
+                <div class="values__grid">
+                    <!-- 卡片1 -->
+                    <div class="values__card">
+                        <div class="values__card-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 40V20l12-8 12 8v20H6z"></path>
+                                <path d="M30 28h12v12H30z"></path>
+                                <path d="M36 28v-4a6 6 0 0 0-6-6"></path>
+                                <path d="M18 12V8a6 6 0 0 0-6-6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="values__card-title">品牌价值放大</h3>
+                        <p class="values__card-desc">通过精准的策略定位，让包装成为品牌溢价的重要支撑，提升产品在货架上的辨识度和吸引力。</p>
+                    </div>
+                    
+                    <!-- 卡片2 -->
+                    <div class="values__card">
+                        <div class="values__card-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="8" y="12" width="32" height="24" rx="4"></rect>
+                                <path d="M16 20h4v4h-4zM24 20h8v4h-8z"></path>
+                                <path d="M16 28h16v4H16z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="values__card-title">成本精准可控</h3>
+                        <p class="values__card-desc">科学的成本规划和供应商管理，在保证品质的前提下实现最优性价比，平均为客户节省15-30%包装成本。</p>
+                    </div>
+                    
+                    <!-- 卡片3 -->
+                    <div class="values__card">
+                        <div class="values__card-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="24" cy="24" r="18"></circle>
+                                <path d="M24 12v12l8 8"></path>
+                            </svg>
+                        </div>
+                        <h3 class="values__card-title">效率大幅提升</h3>
+                        <p class="values__card-desc">标准化的项目管理流程和数字化工具，平均缩短30%的项目周期，快速响应市场变化。</p>
+                    </div>
+                    
+                    <!-- 卡片4 -->
+                    <div class="values__card">
+                        <div class="values__card-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="30" r="12"></circle>
+                                <circle cx="30" cy="30" r="12"></circle>
+                                <circle cx="24" cy="18" r="12"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="values__card-title">协同高效无忧</h3>
+                        <p class="values__card-desc">专属客户经理全程跟进，设计与生产团队紧密协作，确保每个环节无缝衔接。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS 流程指示器 -->
+        <section class="process" id="process">
+            <div class="process__container">
+                <div class="process__steps">
+                    <div class="process__step process__step--active">
+                        <span class="process__step-text">策略</span>
+                    </div>
+                    <svg class="process__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                    <div class="process__step">
+                        <span class="process__step-text">设计</span>
+                    </div>
+                    <svg class="process__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                    <div class="process__step">
+                        <span class="process__step-text">生产</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA 行动召唤区 - 左右双图+居中内容 -->
+        <section class="cta" id="cta">
+            <div class="cta__bg"></div>
+            
+            <!-- 左侧刀版图 -->
+            <div class="cta__left-visual">
+                <svg class="cta__die-cut" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- 包装盒刀版图 -->
+                    <path d="M100,200 L300,200 L300,400 L100,400 Z" stroke="#ddd" stroke-width="1" fill="none"/>
+                    <path d="M100,200 L150,150 L350,150 L300,200" stroke="#ddd" stroke-width="1" fill="none"/>
+                    <path d="M300,200 L350,150 L350,350 L300,400" stroke="#ddd" stroke-width="1" fill="none"/>
+                    <path d="M100,400 L150,450 L350,450 L300,400" stroke="#ddd" stroke-width="1" fill="none"/>
+                    <path d="M350,450 L350,350" stroke="#ddd" stroke-width="1" fill="none"/>
+                    <path d="M150,150 L150,450" stroke="#ddd" stroke-width="1" fill="none"/>
+                    <!-- 折叠线 -->
+                    <line x1="200" y1="150" x2="200" y2="450" stroke="#eee" stroke-width="1" stroke-dasharray="5,5"/>
+                    <line x1="100" y1="300" x2="300" y2="300" stroke="#eee" stroke-width="1" stroke-dasharray="5,5"/>
+                </svg>
+            </div>
+            
+            <div class="cta__container">
+                <div class="cta__content">
+                    <h2 class="cta__title">你的包装升级<br>从一次讨论开始</h2>
+                    <a href="#" class="cta__btn">
+                        <span>与设计师聊聊</span>
+                        <svg class="cta__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 右侧3D效果图 -->
+            <div class="cta__right-visual">
+                <img src="images/cta-packages.svg" alt="包装产品展示" class="cta__image" loading="lazy">
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER 页脚 -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__top-container">
+                <p class="footer__tagline">
+                    <span class="footer__tagline-line">中国绿色</span>
+                    <span class="footer__tagline-line">智造包装革新者</span>
+                </p>
+                <div class="footer__brand">
+                    <span class="footer__brand-text">We </span>
+                    <span class="footer__brand-highlight">are</span>
+                    <span class="footer__brand-text"> EUPRO</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer__main">
+            <div class="footer__main-container">
+                <!-- 关于欧诺 -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">关于欧诺</h4>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">产品中心</a></li>
+                        <li><a href="#" class="footer__link">解决方案</a></li>
+                        <li><a href="#" class="footer__link">专业服务</a></li>
+                        <li><a href="#" class="footer__link">案例中心</a></li>
+                        <li><a href="#" class="footer__link">新闻动态</a></li>
+                        <li><a href="#" class="footer__link">关于我们</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 联系我们 -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">联系我们</h4>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <span class="footer__contact-label">邮箱：</span>
+                            <span>contact@eupro.com</span>
+                        </div>
+                        <div class="footer__contact-item">
+                            <span class="footer__contact-label">电话：</span>
+                            <span>400-888-9999</span>
+                        </div>
+                        <div class="footer__contact-item">
+                            <span class="footer__contact-label">地址：</span>
+                            <span>上海市浦东新区张江高科技园区</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 关注我们 -->
+                <div class="footer__column">
+                    <h4 class="footer__column-title">关注我们</h4>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="微信">
+                            <svg viewBox="0 0 24 24"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.032zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="微博">
+                            <svg viewBox="0 0 24 24"><path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.737 5.439l-.002.004zM9.05 17.219c-.384.616-1.208.884-1.829.602-.612-.279-.793-.991-.406-1.593.379-.595 1.176-.861 1.793-.601.622.263.82.972.442 1.592zm1.27-1.627c-.141.237-.449.353-.689.253-.236-.09-.313-.361-.177-.586.138-.227.436-.346.672-.24.239.09.315.36.18.573h.014zm.176-2.719c-1.893-.493-4.033.45-4.857 2.118-.836 1.704-.026 3.591 1.886 4.21 1.983.64 4.318-.341 5.132-2.179.8-1.793-.201-3.642-2.161-4.149zm7.563-1.224c-.346-.105-.578-.172-.4-.627.386-.998.425-1.859.003-2.473-.789-1.151-2.949-1.09-5.404-.031 0 0-.774.34-.576-.277.381-1.215.324-2.229-.27-2.817-1.344-1.332-4.918.045-7.985 3.073C1.134 10.611 0 13.068 0 15.221c0 4.121 5.288 6.629 10.459 6.629 6.784 0 11.295-3.943 11.295-7.071 0-1.893-1.598-2.966-3.695-3.13zM21.804 6.519c-1.138-1.266-2.822-1.752-4.39-1.405l.019-.006c-.326.075-.524.394-.445.72.079.326.397.521.723.445.984-.227 2.053.066 2.762.853.71.789.93 1.892.567 2.861l-.007.015c-.117.311.041.658.352.775.312.117.659-.042.776-.353.563-1.437.232-3.08-.718-4.173l-.021-.023-.022-.025-.596-.684zm-1.646 1.779c-.544-.604-1.357-.837-2.113-.669l.011-.003c-.326.075-.524.394-.445.72.079.326.397.521.723.445.366-.084.766.027 1.033.323.267.296.349.705.214 1.073l-.004.011c-.117.311.041.658.352.775.312.117.659-.042.776-.353.306-.781.1-1.683-.547-2.322z"/></svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="抖音">
+                            <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer__bottom">
+            <div class="footer__bottom-container">
+                <p class="footer__copyright">© 2024 EUPRO欧诺包装 版权所有 | 沪ICP备12345678号</p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">隐私政策</a>
+                    <a href="#" class="footer__legal-link">使用条款</a>
+                    <a href="#" class="footer__legal-link">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#faf8f5"/>
+  
+  <!-- 手部轮廓（简化） -->
+  <g transform="translate(400, 350)">
+    <!-- 左手 -->
+    <ellipse cx="-150" cy="50" rx="80" ry="60" fill="#e8c4a0"/>
+    <ellipse cx="-180" cy="0" rx="25" ry="40" fill="#e8c4a0"/>
+    <ellipse cx="-140" cy="-20" rx="25" ry="45" fill="#e8c4a0"/>
+    <ellipse cx="-100" cy="-10" rx="25" ry="42" fill="#e8c4a0"/>
+    
+    <!-- 右手 -->
+    <ellipse cx="150" cy="50" rx="80" ry="60" fill="#e8c4a0"/>
+    <ellipse cx="180" cy="0" rx="25" ry="40" fill="#e8c4a0"/>
+    <ellipse cx="140" cy="-20" rx="25" ry="45" fill="#e8c4a0"/>
+    <ellipse cx="100" cy="-10" rx="25" ry="42" fill="#e8c4a0"/>
+  </g>
+  
+  <!-- 盒子 -->
+  <g transform="translate(400, 300)">
+    <!-- 盒子主体 -->
+    <rect x="-120" y="-80" width="240" height="160" rx="5" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+    
+    <!-- 盒盖 -->
+    <rect x="-120" y="-120" width="240" height="50" rx="5" fill="#f8f8f8" stroke="#e0e0e0" stroke-width="2"/>
+    
+    <!-- 文字 Hello, June -->
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="24" fill="#333" text-anchor="middle" font-weight="300">Hello, June</text>
+    
+    <!-- 装饰线条 -->
+    <line x1="-80" y1="-40" x2="80" y2="-40" stroke="#00D26A" stroke-width="3"/>
+  </g>
+</svg>

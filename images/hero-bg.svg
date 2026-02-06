@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="800" fill="url(#heroGrad)"/>
+  
+  <!-- 抽象装饰线条 -->
+  <g opacity="0.1" stroke="#00D26A" stroke-width="2">
+    <line x1="200" y1="100" x2="600" y2="500"/>
+    <line x1="1500" y1="200" x2="1700" y2="600"/>
+    <line x1="100" y1="600" x2="400" y2="700"/>
+    <line x1="1400" y1="100" x2="1800" y2="300"/>
+  </g>
+  
+  <!-- 笔记本电脑轮廓 -->
+  <g transform="translate(1100, 250)">
+    <!-- 屏幕 -->
+    <rect x="0" y="0" width="400" height="260" rx="10" fill="#2a2a4a"/>
+    <rect x="20" y="20" width="360" height="200" rx="5" fill="#0a0a1a"/>
+    
+    <!-- 屏幕内容 - 80% -->
+    <text x="200" y="140" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#00D26A" text-anchor="middle">80%</text>
+    
+    <!-- 图表线条 -->
+    <polyline points="40,160 100,140 160,150 220,120 280,100 340,90" fill="none" stroke="#00D26A" stroke-width="3"/>
+    
+    <!-- 键盘底座 -->
+    <path d="M-20,260 L420,260 L440,300 L-40,300 Z" fill="#3a3a5a"/>
+  </g>
+  
+  <!-- 装饰圆点 -->
+  <g fill="#00D26A" opacity="0.3">
+    <circle cx="300" cy="200" r="100"/>
+    <circle cx="1600" cy="600" r="150"/>
+  </g>
+</svg>

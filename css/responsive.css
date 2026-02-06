@@ -1,0 +1,545 @@
+/**
+ * EUPRO 欧诺包装 - 策略页面
+ * Responsive Stylesheet
+ * 响应式适配: 1920px / 1440px / 1024px(平板) / 768px / 480px(移动)
+ */
+
+/* ========================================
+   1440px 及以下
+   ======================================== */
+@media screen and (max-width: 1440px) {
+    :root {
+        --container-padding: 0.48rem;
+    }
+    
+    .hero {
+        height: 5.50rem;
+    }
+}
+
+/* ========================================
+   1200px 及以下
+   ======================================== */
+@media screen and (max-width: 1200px) {
+    :root {
+        --container-padding: 0.36rem;
+    }
+    
+    /* 侧边导航隐藏 */
+    .side-nav {
+        display: none;
+    }
+    
+    /* 策略简介区调整 */
+    .strategy-intro__container {
+        grid-template-columns: 1.6rem 1fr 3.2rem;
+        gap: var(--spacing-xl);
+    }
+    
+    /* 策略网格调整 */
+    .strategy-grid {
+        max-width: 100%;
+    }
+    
+    /* 四列卡片改为两列 */
+    .values__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Footer 布局调整 */
+    .footer__main-container {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+}
+
+/* ========================================
+   1024px 及以下 (平板端)
+   ======================================== */
+@media screen and (max-width: 1024px) {
+    :root {
+        --container-padding: 0.32rem;
+        --font-size-hero: 0.48rem;
+        --font-size-h1: 0.32rem;
+        --font-size-h2: 0.28rem;
+    }
+    
+    /* Header 调整 */
+    .header {
+        height: 0.64rem;
+    }
+    
+    .header__nav {
+        gap: var(--spacing-md);
+    }
+    
+    .hero {
+        margin-top: 0.64rem;
+        height: 5.00rem;
+    }
+    
+    /* 策略简介区改为两列 */
+    .strategy-intro__container {
+        grid-template-columns: 1fr 1.5fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .strategy-intro__title::after {
+        right: -0.24rem;
+        font-size: 0.36rem;
+    }
+    
+    /* 服务内容改为单列 */
+    .strategy-services__row {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .strategy-services__row--reverse {
+        direction: ltr;
+    }
+    
+    .strategy-services__row--reverse > * {
+        direction: ltr;
+    }
+    
+    .strategy-services__image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    /* 竞争力区改为单列 */
+    .competitiveness__content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .competitiveness__image {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+    
+    /* CTA区调整 - 保持居中 */
+    .cta__container {
+        flex-direction: column;
+        padding: var(--spacing-3xl) var(--container-padding);
+        text-align: center;
+    }
+    
+    .cta__content {
+        max-width: 100%;
+        margin-bottom: var(--spacing-xl);
+    }
+    
+    .cta__visual {
+        display: flex;
+        max-width: 4.00rem;
+    }
+    
+    /* Footer 调整 */
+    .footer__main-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer__top-container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+}
+
+/* ========================================
+   768px 及以下 (小平板/大手机)
+   ======================================== */
+@media screen and (max-width: 768px) {
+    :root {
+        --container-padding: 0.24rem;
+        --font-size-hero: 0.40rem;
+        --font-size-h1: 0.28rem;
+        --font-size-h2: 0.24rem;
+        --font-size-h3: 0.20rem;
+        --font-size-h4: 0.18rem;
+        --font-size-body: 0.14rem;
+    }
+    
+    /* Header - 显示移动端菜单 */
+    .header {
+        height: 0.56rem;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+    
+    .header__btn {
+        display: none;
+    }
+    
+    .header__search {
+        display: none;
+    }
+    
+    .header__menu-toggle {
+        display: flex;
+    }
+    
+    /* 移动端导航菜单 */
+    .header__nav--mobile {
+        display: flex !important;
+        position: fixed;
+        top: 0.56rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-bg-white);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        gap: 0;
+        z-index: 999;
+        transform: translateX(100%);
+        transition: transform var(--transition-normal);
+    }
+    
+    .header__nav--mobile.active {
+        transform: translateX(0);
+    }
+    
+    .header__nav--mobile .header__nav-link {
+        padding: var(--spacing-md) 0;
+        border-bottom: 1px solid var(--color-border);
+        font-size: var(--font-size-h4);
+    }
+    
+    .hero {
+        margin-top: 0.56rem;
+        height: 4.50rem;
+    }
+    
+    .hero__title {
+        font-size: var(--font-size-hero);
+    }
+    
+    .hero__subtitle {
+        font-size: var(--font-size-body);
+    }
+    
+    /* 策略简介区改为单列 */
+    .strategy-intro__container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .strategy-intro__title {
+        font-size: var(--font-size-h2);
+        text-align: center;
+    }
+    
+    .strategy-intro__title::after {
+        position: static;
+        margin-left: 0.08rem;
+    }
+    
+    .strategy-intro__desc {
+        text-align: center;
+    }
+    
+    /* 策略分栏改为单列 */
+    .strategy-split {
+        grid-template-columns: 1fr;
+    }
+    
+    .strategy-split__image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    .strategy-intro__nav {
+        position: static;
+    }
+    
+    .strategy-intro__nav-list {
+        flex-direction: row;
+        border-left: none;
+        padding-left: 0;
+        gap: var(--spacing-xl);
+    }
+    
+    .strategy-intro__nav-item--active::before {
+        display: none;
+    }
+    
+    .strategy-intro__nav-link {
+        white-space: nowrap;
+    }
+    
+    .strategy-intro__title {
+        font-size: var(--font-size-h2);
+        text-align: center;
+    }
+    
+    .strategy-intro__title::after {
+        position: static;
+        margin-left: 0.08rem;
+    }
+    
+    .strategy-intro__desc {
+        text-align: center;
+    }
+    
+    /* 策略分栏改为单列 */
+    .strategy-split {
+        grid-template-columns: 1fr;
+    }
+    
+    .strategy-split__image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    .strategy-intro__container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .strategy-intro__nav {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: var(--spacing-md);
+    }
+    
+    .strategy-intro__nav-list {
+        flex-direction: row;
+        border-left: none;
+        padding-left: 0;
+        gap: var(--spacing-xl);
+    }
+    
+    .strategy-intro__nav-item--active::before {
+        display: none;
+    }
+    
+    .strategy-intro__nav-link {
+        white-space: nowrap;
+    }
+    
+    .strategy-intro__title {
+        font-size: var(--font-size-h2);
+        text-align: center;
+    }
+    
+    .strategy-intro__title::after {
+        position: static;
+        margin-left: 0.08rem;
+    }
+    
+    .strategy-intro__desc {
+        text-align: center;
+    }
+    
+    /* 四列卡片改为单列 */
+    .values__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .values__card {
+        padding: var(--spacing-lg);
+    }
+    
+    /* 流程指示器调整 */
+    .process__steps {
+        gap: var(--spacing-md);
+    }
+    
+    .process__step-text {
+        font-size: var(--font-size-body);
+    }
+    
+    .process__arrow {
+        width: 0.24rem;
+        height: 0.24rem;
+    }
+    
+    /* CTA调整 */
+    .cta {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    .cta__title {
+        font-size: var(--font-size-h1);
+    }
+    
+    .cta__visual {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        max-width: 3.00rem;
+        margin-top: var(--spacing-lg);
+    }
+    
+    /* Footer */
+    .footer__tagline {
+        font-size: var(--font-size-h3);
+    }
+    
+    .footer__brand {
+        font-size: var(--font-size-h3);
+    }
+    
+    .footer__main-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .footer__bottom-container {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+}
+
+/* ========================================
+   480px 及以下 (移动端)
+   ======================================== */
+@media screen and (max-width: 480px) {
+    :root {
+        --container-padding: 0.20rem;
+        --font-size-hero: 0.32rem;
+        --font-size-h1: 0.24rem;
+        --font-size-h2: 0.20rem;
+        --spacing-4xl: 0.60rem;
+        --spacing-3xl: 0.40rem;
+    }
+    
+    .hero {
+        height: 4.00rem;
+    }
+    
+    .hero__title {
+        font-size: var(--font-size-hero);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .hero__subtitle {
+        font-size: var(--font-size-body-sm);
+    }
+    
+    /* 区块标题调整 */
+    .section-title {
+        font-size: var(--font-size-h2);
+    }
+    
+    .section-label {
+        font-size: 0.11rem;
+    }
+    
+    /* 手风琴调整 */
+    .accordion-item {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .accordion-item__title {
+        font-size: var(--font-size-body-sm);
+    }
+    
+    .accordion-item__icon {
+        width: 0.20rem;
+        height: 0.20rem;
+    }
+    
+    .accordion-item__text {
+        font-size: 0.12rem;
+        padding-left: 0.32rem;
+    }
+    
+    /* 竞争力项调整 */
+    .competitiveness__item {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .competitiveness__item-icon {
+        width: 0.40rem;
+        height: 0.40rem;
+    }
+    
+    /* 卡片调整 */
+    .values__card {
+        padding: var(--spacing-md);
+    }
+    
+    .values__card-icon {
+        width: 0.40rem;
+        height: 0.40rem;
+    }
+    
+    .values__card-title {
+        font-size: var(--font-size-body);
+    }
+    
+    .values__card-desc {
+        font-size: var(--font-size-caption);
+    }
+    
+    /* CTA按钮 */
+    .cta__btn {
+        padding: 0.12rem 0.28rem;
+        font-size: var(--font-size-body-sm);
+    }
+    
+    /* Footer */
+    .footer__top,
+    .footer__main {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .footer__social-link {
+        width: 0.36rem;
+        height: 0.36rem;
+    }
+}
+
+/* ========================================
+   375px 及以下 (小屏手机)
+   ======================================== */
+@media screen and (max-width: 375px) {
+    :root {
+        --container-padding: 0.16rem;
+    }
+    
+    .strategy-intro__nav-list {
+        gap: var(--spacing-md);
+    }
+    
+    .process__steps {
+        gap: var(--spacing-sm);
+    }
+    
+    .process__step-text {
+        font-size: var(--font-size-body-sm);
+    }
+}
+
+/* ========================================
+   打印样式
+   ======================================== */
+@media print {
+    .header,
+    .footer,
+    .cta,
+    .process {
+        display: none;
+    }
+    
+    .hero {
+        height: auto;
+        padding: var(--spacing-xl) 0;
+        margin-top: 0;
+    }
+    
+    .section {
+        padding: var(--spacing-lg) 0;
+        page-break-inside: avoid;
+    }
+}

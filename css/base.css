@@ -1,0 +1,290 @@
+/* ========================================
+   EUPRO 欧诺包装 - 策略页面
+   REM 适配方案: 1rem = 100px
+   Design System & Base Styles
+   ======================================== */
+
+/* ===== REM 适配方案 ===== */
+/* 基准: 设计稿按 1920px 宽度设计，1rem = 100px */
+html {
+    font-size: 100px;
+}
+
+/* 响应式基准字号调整 */
+@media screen and (max-width: 1920px) {
+    html { font-size: 5.208vw; } /* 100px / 1920px * 100 = 5.208vw */
+}
+
+@media screen and (max-width: 1440px) {
+    html { font-size: 6.944vw; } /* 100px / 1440px * 100 = 6.944vw */
+}
+
+@media screen and (max-width: 1280px) {
+    html { font-size: 7.813vw; }
+}
+
+/* 平板端 */
+@media screen and (max-width: 1024px) {
+    html { font-size: 9.766vw; }
+}
+
+@media screen and (max-width: 768px) {
+    html { font-size: 13.021vw; }
+}
+
+/* 移动端 */
+@media screen and (max-width: 480px) {
+    html { font-size: 21.333vw; } /* 100px / 468.75px ≈ 21.333vw (iPhone 12/13 390px) */
+}
+
+@media screen and (max-width: 375px) {
+    html { font-size: 26.667vw; }
+}
+
+/* ===== CSS 变量系统 ===== */
+:root {
+    /* 品牌色 */
+    --color-primary: #00D26A;
+    --color-primary-light: #E8F5E9;
+    --color-primary-dark: #00B050;
+    
+    /* 文字色 */
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #333333;
+    --color-text-body: #666666;
+    --color-text-muted: #999999;
+    --color-text-light: #CCCCCC;
+    
+    /* 背景色 */
+    --color-bg-white: #FFFFFF;
+    --color-bg-gray: #F7F7F7;
+    --color-bg-gray-light: #FAFAFA;
+    --color-bg-dark: #111111;
+    --color-bg-darker: #0A0A0A;
+    
+    /* 边框/分隔线 */
+    --color-border: #E5E5E5;
+    --color-border-light: #EEEEEE;
+    
+    /* 字体 */
+    --font-family-cn: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --font-family-en: "Inter", "Helvetica Neue", Arial, sans-serif;
+    
+    /* 字号 (基于 rem，1rem = 100px) */
+    --font-size-hero: 0.52rem;       /* 52px */
+    --font-size-h1: 0.36rem;         /* 36px */
+    --font-size-h2: 0.32rem;         /* 32px */
+    --font-size-h3: 0.24rem;         /* 24px */
+    --font-size-h4: 0.20rem;         /* 20px */
+    --font-size-body: 0.15rem;       /* 15px */
+    --font-size-body-sm: 0.14rem;    /* 14px */
+    --font-size-caption: 0.12rem;    /* 12px */
+    --font-size-small: 0.13rem;      /* 13px */
+    
+    /* 字重 */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    
+    /* 行高 */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.4;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.8;
+    
+    /* 间距 */
+    --spacing-xs: 0.08rem;   /* 8px */
+    --spacing-sm: 0.12rem;   /* 12px */
+    --spacing-md: 0.16rem;   /* 16px */
+    --spacing-lg: 0.24rem;   /* 24px */
+    --spacing-xl: 0.32rem;   /* 32px */
+    --spacing-2xl: 0.48rem;  /* 48px */
+    --spacing-3xl: 0.64rem;  /* 64px */
+    --spacing-4xl: 0.80rem;  /* 80px */
+    --spacing-5xl: 1.00rem;  /* 100px */
+    
+    /* 圆角 */
+    --radius-sm: 0.04rem;    /* 4px */
+    --radius-md: 0.08rem;    /* 8px */
+    --radius-lg: 0.12rem;    /* 12px */
+    --radius-xl: 0.16rem;    /* 16px */
+    --radius-pill: 0.28rem;  /* 28px - 胶囊按钮 */
+    --radius-full: 50%;
+    
+    /* 阴影 */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --shadow-nav: 0 2px 4px rgba(0, 0, 0, 0.04);
+    
+    /* 容器 */
+    --container-max-width: 14.40rem; /* 1440px */
+    --container-padding: 0.64rem;    /* 64px */
+    
+    /* 过渡动画 */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ===== 基础重置 ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-family-cn);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-body);
+    background-color: var(--color-bg-white);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* ===== 通用工具类 ===== */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.section {
+    padding: var(--spacing-4xl) 0;
+}
+
+.section-sm {
+    padding: var(--spacing-3xl) 0;
+}
+
+.section-lg {
+    padding: var(--spacing-5xl) 0;
+}
+
+/* 文字工具类 */
+.text-primary { color: var(--color-primary); }
+.text-dark { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-body { color: var(--color-text-body); }
+.text-muted { color: var(--color-text-muted); }
+.text-white { color: #FFFFFF; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* 背景工具类 */
+.bg-white { background-color: var(--color-bg-white); }
+.bg-gray { background-color: var(--color-bg-gray); }
+.bg-dark { background-color: var(--color-bg-dark); }
+.bg-primary { background-color: var(--color-primary); }
+
+/* 按钮基础样式 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.12rem 0.32rem;
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-pill);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.btn-outline:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* 区块标题组件 */
+.section-header {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.section-label {
+    font-size: var(--font-size-caption);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-title {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-normal);
+}
+
+.section-title-sm {
+    font-size: var(--font-size-h3);
+}
+
+/* 装饰星号 */
+.decor-star {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+/* 隐藏类 */
+.hidden { display: none !important; }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

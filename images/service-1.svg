@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a3a"/>
+      <stop offset="100%" style="stop-color:#1a1a2a"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f5f5f7"/>
+  
+  <!-- 盒子阴影 -->
+  <ellipse cx="400" cy="520" rx="200" ry="30" fill="#000" opacity="0.1"/>
+  
+  <!-- 盒子底部 -->
+  <path d="M200,350 L600,350 L580,500 L220,500 Z" fill="url(#boxGrad)"/>
+  
+  <!-- 盒子盖子（打开状态） -->
+  <path d="M200,350 L600,350 L600,200 L200,200 Z" fill="#3a3a4a"/>
+  <path d="M200,200 L250,150 L650,150 L600,200 Z" fill="#4a4a5a"/>
+  
+  <!-- 内部衬垫 -->
+  <rect x="220" y="360" width="360" height="130" fill="#f0f0f5"/>
+  
+  <!-- 衬垫阴影 -->
+  <rect x="220" y="360" width="360" height="10" fill="#e0e0e5"/>
+</svg>
